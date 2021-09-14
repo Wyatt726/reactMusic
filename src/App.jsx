@@ -1,29 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
+import data from "./music"
 
 const App = () => {
-  return <div className="app-container">
-    <table>
-        <thead>
-        <tr>
-          <th>title</th>
-          <th>album</th>
-          <th>artist</th>
-          <th>release date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>White House Road</td>
-          <td>Red Barn Radio</td>
-          <td>Tyler Childers</td>
-          <td>2016</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-}
+    const [music, setMusic] = useState(data);
+
+    return (
+        <div className="app-container">
+        <table>
+            <thead>
+            <tr>
+            <th>title</th>
+            <th>album</th>
+            <th>artist</th>
+            <th>release date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {music.map((music) => (
+                <tr>
+                    <td>music.title</td>
+                    <td>music.album</td>
+                    <td>music.artist</td>
+                    <td>music.release date</td>
+                </tr>
+            ))}
+        </tbody>
+        </table>
+            <button type="reset">Cancel Request</button>
+        </div>
+        );
+    };
 
 
 
