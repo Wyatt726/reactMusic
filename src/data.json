@@ -1,0 +1,9 @@
+[
+    {
+        id: "",
+        title: '',
+        album:'',
+        artist:'',
+        release_date:''
+    },
+]
